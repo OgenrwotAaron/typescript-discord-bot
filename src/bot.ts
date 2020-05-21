@@ -28,6 +28,11 @@ export class Bot{
             }
 
             console.log(`${message.author.username}: ${message.content}`)
+            
+            /*
+                Get message and generate a dynamic reply
+                Planning on using a tensorflow model for generating replies
+            */
 
             this.messageResponder.handle(message).then(()=>{
                 console.log(`${new Date(message.createdTimestamp)}`)
