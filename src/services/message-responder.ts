@@ -15,7 +15,7 @@ export class MessageResponder{
 
     handle(message:Message): Promise<Message | Message[]>{
         if(this.pingFinder.isPing(message.content)){
-            return message.reply("pong!");
+            return message.reply("pong! we're pinging");
         }
 
         return Promise.reject()
